@@ -1,4 +1,5 @@
-<?php 
+<?php
+session_start();
 // In production, you would set these to 0 and handle errors gracefully
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -24,13 +25,13 @@ $categories = getCategories($db);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShoesHub - Your Premier Shoe Destination</title>
-    
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -73,5 +74,5 @@ $categories = getCategories($db);
             </div>
         </nav>
     </header>
-    
+
     <main class="container py-4">

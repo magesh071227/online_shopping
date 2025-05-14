@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 // Function to sanitize user input
 function sanitize($data) {

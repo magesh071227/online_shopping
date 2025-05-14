@@ -11,7 +11,14 @@ if ($product_id <= 0) {
 }
 
 // Get product details
-$product = getProduct($db, $product_id);
+$query = "SELECT p.*, c.name as category_name 
+          FROM products p 
+          JOIN categories c ON p.category_id = c.id 
+          WHERE p.id = :product_id";
+$stmt = $db->prepare($query);
+$stmt->bindParam(":product_id", $product_id, PDO::PARAM_INT);
+$stmt->execute();
+$product = $stmt->fetch(PDO::FETCH_ASSOC);
 
 // Redirect if product not found
 if (!$product) {
