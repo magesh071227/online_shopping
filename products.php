@@ -48,10 +48,15 @@ $products = getProducts($db, $category_id);
                             <div class="product-category"><?php echo $product['category_name']; ?></div>
                             <div class="product-price"><?php echo formatPrice($product['price']); ?></div>
                             <a href="product-details.php?id=<?php echo $product['id']; ?>" class="btn btn-outline-primary w-100 mb-2">View Details</a>
-                            <form action="cart.php" method="post">
+                            <form action="cart.php" method="post" class="mb-2">
                                 <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
                                 <input type="hidden" name="action" value="add">
                                 <button type="submit" class="btn btn-primary w-100">Buy Now</button>
+                            </form>
+                            <form action="cart.php" method="post">
+                                <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
+                                <input type="hidden" name="action" value="add">
+                                <button type="submit" class="btn btn-outline-primary w-100">Add to Cart</button>
                             </form>
                         </div>
                     </div>

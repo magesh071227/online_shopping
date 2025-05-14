@@ -97,6 +97,14 @@ $related_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <i class="fas fa-shopping-cart me-2"></i> Buy Now
                     </button>
                 </form>
+                <form action="cart.php" method="post">
+                    <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
+                    <input type="hidden" name="action" value="add">
+                    <input type="hidden" name="quantity" value="1">
+                    <button type="submit" class="btn btn-outline-primary btn-lg mb-3">
+                        <i class="fas fa-cart-plus me-2"></i> Add to Cart
+                    </button>
+                </form>
                 <?php else: ?>
                 <button disabled class="btn btn-secondary btn-lg mb-3">
                     <i class="fas fa-ban me-2"></i> Out of Stock

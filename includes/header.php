@@ -53,16 +53,7 @@ $categories = getCategories($db);
                         <li class="nav-item">
                             <a class="nav-link" href="products.php">All Shoes</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Categories
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <?php foreach ($categories as $category): ?>
-                                <li><a class="dropdown-item" href="products.php?category=<?php echo $category['id']; ?>"><?php echo $category['name']; ?></a></li>
-                                <?php endforeach; ?>
-                            </ul>
-                        </li>
+                        
                     </ul>
                     <div class="d-flex">
                         <a href="cart.php" class="btn btn-outline-light me-2">
