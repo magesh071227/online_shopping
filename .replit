@@ -1,0 +1,20 @@
+modules = ["php-8.2", "web", "nodejs-20"]
+run = "index.php"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "index.php"]
+
+[workflows]
+runButton = "Run PHP Server"
+
+[[workflows.workflow]]
+name = "Run PHP Server"
+author = 42666510
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "php -S 0.0.0.0:5000"
