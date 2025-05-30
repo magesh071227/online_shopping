@@ -1,7 +1,7 @@
 
 <?php
 class Database {
-    private $host = "ec2-3-144-114-212.us-east-2.compute.amazonaws.com";
+    private $host = "ec2-13-59-224-9.us-east-2.compute.amazonaws.com";
     private $db_name = "shop_db";
     private $username = "magesh";
     private $password = "mypassword";
